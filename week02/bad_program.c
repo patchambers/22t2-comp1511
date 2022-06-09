@@ -1,39 +1,37 @@
-// Bad program to print out integer / integer or double / double
-// Patrick Chambers (z5264081), 8/6/22
-
+// This program scans in 2 integers and prints out the first divided by the 
+// second, in both integer and decimal form
+// Patrick Chambers (z5264081), 9/6/22
 
 #include <stdio.h>
 
+// Procedure to print out an error message if the input is invalid
 void print_error() {
-    printf("ERROR: input invalid\n");
+    printf("Input is invalid\n");
 }
 
 
 int main(void) {
 
-    // scan in a and b
-    int a;
-    int b;
+    int num_one;
+    scanf("%d", &num_one);
+    int num_two;
+    scanf("%d", &num_two);
     
-    scanf("%d", &a);
-    scanf("%d", &b);
-    
-    if (a < b) {
-        // if first int smaller than second, error (procedure)
+    if (num_one < num_two) {
+        // If num_one is less than num_two, print error
         print_error();
-    } else if (b == 0) {
-        // if second int equals 0, error
-        print_error();
+    } else if (num_two == 0) {
+        // num_two equals 0, print error
+        print_error();        
     } else {
-        // print a/b, print (a*1.0) / (b*1.0)
-        printf("a/b = %d\n", a / b);
-        printf("(a * 1.0) / (b * 1.0) = %lf\n", (a * 1.0) / (b * 1.0));
+        // Otherwise print out num_one / num_two
+        printf("num_one / num_two = %d\n", num_one / num_two);
+        printf(
+            "(num_one * 1.0) / (num_two * 1.0) = %lf\n", 
+            (num_one * 1.0) / (num_two * 1.0)
+        );
     }
-    
-    printf("0.3 - 0.1 = %lf\n", 0.3 - 0.1);
-    
     return 0;
 }
-
 
 
