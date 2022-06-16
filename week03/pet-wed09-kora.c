@@ -1,4 +1,5 @@
 // Program to demonstrate use of structs and enums
+// wed09-kora
 // Patrick Chambers (z5264081), 15/6/22
 
 #include <stdio.h>
